@@ -1,0 +1,9 @@
+Installed Oracle
+Open Command Line
+connect system/password
+alter user hr account unlock
+connect hr/hr ( if we are trying to connect first time, we will get password expired)
+enter new passwordc : hr and confirm password :hr  ( but entered password will not echo on the screen)
+
+database home page
+login with username : hr and password: hr
