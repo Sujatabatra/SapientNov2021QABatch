@@ -1,0 +1,15 @@
+var person={
+  'firstName':'AAAA',
+  'lastName':'BBBB',
+  'getFullName':function(){
+    return this.firstName+" "+this.lastName;
+  }
+}
+
+console.log("person "+person.getFullName());
+
+var person1=person;
+person={};
+console.log("person 1 : "+person1.getFullName());
+console.log(window);
+
