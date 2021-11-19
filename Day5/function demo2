@@ -1,0 +1,19 @@
+function print(a,b,c){
+  console.log("a = "+a);
+  console.log("b = "+b);
+  console.log("c = "+c);
+}
+function print(){
+  console.log("Hi I am Print Method");
+}
+print(10,20,30);
+console.log("===========")
+print(10,20);
+console.log("===========")
+print(10);
+console.log("===========")
+print();
+console.log("===========")
+print(10,20,30,40,50);
+
+

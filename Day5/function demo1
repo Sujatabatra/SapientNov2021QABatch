@@ -1,0 +1,26 @@
+/*declaration and defination*/
+function sum(x,y){
+  return x+y;
+}
+
+//calling the function
+var addition=sum(10,20);
+console.log("Sum : "+addition);
+
+function print(a,b,c){
+  console.log("a = "+a);
+  console.log("b = "+b);
+  console.log("c = "+c);
+}
+
+print(10,20,30);
+console.log("===========")
+print(10,20);
+console.log("===========")
+print(10);
+console.log("===========")
+print();
+console.log("===========")
+print(10,20,30,40,50);
+
+
