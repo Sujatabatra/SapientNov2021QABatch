@@ -1,0 +1,27 @@
+var x={'firstname':'AAAA',
+      'lastname':'BBBB',
+      'yearsOfExperience':21,
+      'prop1':true,
+      '1':'Some Value'};
+
+x.prop2=89;
+
+x.prop3=function(){
+  console.log("Hi I am function propr3");
+}
+
+x.prop4={'technology ':'JS',
+        'company':'Sapient'}
+console.log(x);
+//calling function
+x.prop3();
+console.log(x.firstname);
+console.log(x['firstname']);
+
+console.log(x);
+//console.log(x.1);
+console.log(x[1]);
+
+var a='prop1';
+console.log(x.a);
+console.log(x[a]);
