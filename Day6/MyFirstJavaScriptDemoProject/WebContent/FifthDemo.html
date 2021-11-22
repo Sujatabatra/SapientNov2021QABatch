@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function addition(){
+	var val1=document.forms[0].elements[0].value;
+	var val2=document.myform.number2.value;
+	//alert("Value picked val1 : "+val1+" val2 : "+val2);
+	sum=parseInt(val1)+parseInt(val2);
+	alert("Sum : "+sum);
+	
+		}
+</script>
+</head>
+<body>
+<form name="myform">
+	<input type="text" name="number1" placeholder="First No" ><br><br>
+	<input type="text" name="number2" placeholder="Second No" ><br><br>
+	<input type="button" value="Sum" onclick="addition();">
+</form>
+
+</body>
+</html>
