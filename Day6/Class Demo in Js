@@ -1,0 +1,15 @@
+function Employee(eId,eName,designation,department,salary){
+  this.empId=eId;
+  this.empName=eName;
+  this.department=department;
+  this.designation=designation;
+  this.salary=salary;
+}
+Employee.prototype.displayEmployee=function(){
+  console.log(this.empId+" - "+this.empName+" - "+this.department+" - "+this.designation+" - "+this.salary);
+}
+
+var empObj=new Employee(101,"AAAA","Manager","Sales",150000);
+console.log(empObj);
+
+empObj.displayEmployee();
