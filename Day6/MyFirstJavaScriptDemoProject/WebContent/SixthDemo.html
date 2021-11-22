@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function show(){
+		var id=document.empForm.eId.value;
+		var na=document.empForm.eId.value;
+		if(document.empForm.gender[0].checked==true)
+			var gen=document.empForm.gender[0].value;
+		else if(document.empForm.gender[1].checked==true)
+			var gen=document.empForm.gender[1].value;
+		else
+			var gen="No Gender selected";
+		var data="empId : "+id+" empName : "+na+" gender : "+gen;
+		alert(data);
+		var displayLocation=document.getElementById("showData");
+		displayLocation.innerHTML=data;
+		}
+</script>
+</head>
+<body>
+<h1>Employee Management System</h1>
+<form name="empForm">
+	Enter Employee ID : <input type="text" name="eId"><br><br>
+	Enter Employee Name : <input type="text" name="eName"><br><br>
+	Select Gender : <input type="radio" name="gender" value="Male">Male
+	<input type="radio" name="gender" value="Female">Female
+	<input type="button" onclick="show()" value="Save"> 
+</form>
+
+<div id="showData">
+
+</div>
+</body>
+</html>
