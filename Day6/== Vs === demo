@@ -1,0 +1,14 @@
+var x=10;
+var y="10";
+console.log(typeof x);
+console.log(typeof y);
+//check for content and type equality
+if(x===y)
+  console.log("equal");
+else
+  console.log("not equal");
+//check only for content equality
+if(x==y)
+  console.log("equal");
+else
+  console.log("not equal");

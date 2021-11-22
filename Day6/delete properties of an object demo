@@ -1,0 +1,14 @@
+var employee={
+  'empid':1,
+  'empName':'AAAA',
+  'designation':'Executive',
+  'department':'Sales',
+  'salary':78960
+};
+console.log(employee);
+employee.noOfexperience=9;
+console.log(employee);
+
+//employee.department=undefined;
+delete employee.department;
+console.log(employee);
