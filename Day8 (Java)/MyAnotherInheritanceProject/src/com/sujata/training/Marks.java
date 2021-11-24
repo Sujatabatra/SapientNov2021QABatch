@@ -19,4 +19,17 @@ public class Marks extends Student {
 		System.out.println("Marks 2 : "+marks2);
 		System.out.println("Marks 3 : "+marks3);
 	}
+
+	public int getMarks1() {
+		return marks1;
+	}
+
+	public int getMarks2() {
+		return marks2;
+	}
+
+	public int getMarks3() {
+		return marks3;
+	}
+	
 }

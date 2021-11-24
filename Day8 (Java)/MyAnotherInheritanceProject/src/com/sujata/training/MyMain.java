@@ -14,6 +14,12 @@ public class MyMain {
 		Marks marks=new Marks();
 		marks.input(101, "Asha", 67, 90, 78);
 		marks.showStudentsWithMarks();
+		
+		System.out.println("==============");
+		
+		Grade grade=new Grade();
+		grade.input(999, "Bharti", 89, 67, 56);
+		grade.showAllDetails();
 
 	}
 
