@@ -15,7 +15,7 @@ public class MyFirstStaticDemoMain {
 		obj=new MyFirstStaticDemoClass();
 		obj.x=10;
 		obj.y=20;
-		obj.display();
+		obj.displayAll();
 		System.out.println("z : "+obj.z);
 		System.out.println("obj.a : "+obj.getA());
 		System.out.println("================");
@@ -23,7 +23,7 @@ public class MyFirstStaticDemoMain {
 		obj1=new MyFirstStaticDemoClass();
 		obj1.x=5;
 		obj1.y=15;
-		obj1.display();
+		obj1.displayAll();
 		System.out.println("obj1.z : "+obj1.z);
 		System.out.println("obj1.a : "+obj1.getA());
 		
