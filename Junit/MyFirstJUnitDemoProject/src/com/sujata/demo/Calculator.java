@@ -1,17 +1,22 @@
 package com.sujata.demo;
 
+import com.sujata.exception.NegativeNumberException;
+
 public class Calculator {
 
 	//add is used to add any integer  number
 	public int add(int number1,int number2) {
-		return -1;
+		return number1+number2;
 	}
 	/*
-	 * divide is use to add any positive integer number,
+	 * divide is use to divide any positive integer number,
 	 * if number is negative system will throw NegativeNumberException
 	 * Division by Zero will throw Arithmetic Exception
 	 */
-	public int divide(int number1,int number2) {
-		return 0;
+	public int divide(int number1,int number2) throws NegativeNumberException{
+		if(number1>=0 && number2>=0)
+			return number1/number2;
+		throw new NegativeNumberException("divide will not operate on negative nos");
+		
 	}
 }
