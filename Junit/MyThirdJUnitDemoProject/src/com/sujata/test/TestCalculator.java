@@ -8,12 +8,13 @@ import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.DisplayNameGeneration;
 import org.junit.jupiter.api.DisplayNameGenerator;
+import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
 import com.sujata.demo.Calculator;
 import com.sujata.exception.NegativeNumberException;
 
-//@Disabled("Till the time bug 169 don't get resolved")
+
 @DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores.class)
 @DisplayName("Testing calculator class methods")
 class TestCalculator {
@@ -29,6 +30,9 @@ class TestCalculator {
 		calculator=null;
 	}
 
+	@Nested
+	@DisplayName("Testing add method")
+	class TestingAdd{
 	@DisplayName("testing add with two positive integers")
 	@Test
 	void t001() {
@@ -52,16 +56,19 @@ class TestCalculator {
 	void t004() {
 		assertEquals(-10, calculator.add(10, -20));
 	}
+	}
 	
-	@Disabled("till bug 567 not get resolved")
+	@Nested
+	@DisplayName("Testing Divide method")
+	class MyDivideTest{
 	@Test
 	void t005() throws NegativeNumberException {
 		assertEquals(10, calculator.divide(20, 2));
 	}
 	@Test
-	String t006() {
+	void t006() {
 		assertThrows(ArithmeticException.class,()->calculator.divide(10, 0));
-		return "sujata";
+		
 	}
 	@Test
 	void t007() throws NegativeNumberException {
@@ -81,5 +88,5 @@ class TestCalculator {
 	void t010() {
 		assertThrows(NegativeNumberException.class,()->calculator.divide(0, -10));
 	}
-	
+	}
 }
