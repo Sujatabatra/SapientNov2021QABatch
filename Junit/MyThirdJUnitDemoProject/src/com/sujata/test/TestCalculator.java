@@ -9,6 +9,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.DisplayNameGeneration;
 import org.junit.jupiter.api.DisplayNameGenerator;
 import org.junit.jupiter.api.Nested;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import com.sujata.demo.Calculator;
@@ -20,6 +21,7 @@ import com.sujata.exception.NegativeNumberException;
 class TestCalculator {
 
 	private Calculator calculator;
+	
 	@BeforeEach
 	void setUp() throws Exception {
 		calculator=new Calculator();
@@ -33,8 +35,10 @@ class TestCalculator {
 	@Nested
 	@DisplayName("Testing add method")
 	class TestingAdd{
+	
 	@DisplayName("testing add with two positive integers")
 	@Test
+	@Tag("PROD")
 	void t001() {
 		int expected=30;
 		int actual=calculator.add(10, 20);
@@ -43,16 +47,19 @@ class TestCalculator {
 	}
 
 	@Test
+	@Tag("DEV")
 	void test_add_for_positive_and_negative_integer() {
 		assertEquals(10, calculator.add(-10, 20));
 	}
 	
 	@Test
+	@Tag("PROD")
 	void t003() {
 		assertEquals(-30, calculator.add(-10, -20));
 	}
 
 	@Test
+	@Tag("PROD")
 	void t004() {
 		assertEquals(-10, calculator.add(10, -20));
 	}
