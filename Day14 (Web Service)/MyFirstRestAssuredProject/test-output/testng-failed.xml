@@ -5,7 +5,7 @@
     <classes>
       <class name="com.sujata.test.MyFirstRestAssuredProject">
         <methods>
-          <include name="demoTest"/>
+          <include name="testCaseForReqRes"/>
         </methods>
       </class> <!-- com.sujata.test.MyFirstRestAssuredProject -->
     </classes>

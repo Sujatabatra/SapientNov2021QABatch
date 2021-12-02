@@ -1,8 +1,15 @@
 package com.sujata.test;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
+import javax.xml.crypto.Data;
+
+import org.hamcrest.Matchers;
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 import org.testng.annotations.Test;
 
 import io.restassured.http.ContentType;
@@ -41,13 +48,33 @@ public class MyFirstRestAssuredProject {
   }
   
   @Test
-  public void checkForList() {
+  public void testForBookList1() {
 	  given()
 	  .get("https://simple-books-api.glitch.me/books")
 	  .then()
 	  .statusCode(200);
   }
   
+  @Test
+  public void testForBookList2() {
+	  Response response=given().get("https://simple-books-api.glitch.me/books");
+	  String books=response.getBody().asString();
+	  
+	  JSONParser parser = new JSONParser();
+	  
+	  JSONArray arr=null;
+	  try {
+		arr = (JSONArray) parser.parse(books);
+	} catch (ParseException e) {
+		
+		e.printStackTrace();
+	}
+	  assertTrue(arr.size()>0);
+//	  assertEquals(arr.size(), 6);
+	  
+	  
+	  
+  }
   @Test
   public void checkBookIdPositive() {
 	  given()
@@ -83,5 +110,13 @@ public class MyFirstRestAssuredProject {
 	  .log()
 	  .all();
   }
-  
+  @Test
+  public void testCaseForReqRes() {
+	  given()
+	  .param("page", 2)
+	  .get("https://reqres.in/api/users")
+	  .then()
+	  .statusCode(200)
+	  .body("data.size()", Matchers.greaterThan(0));
+  }
 }
